@@ -1,6 +1,7 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
-from config import TOKEN
+import os
+TOKEN = os.getenv("BOT_TOKEN")
 from database import get_player
 from duel import fight
 
